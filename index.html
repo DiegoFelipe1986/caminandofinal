@@ -4,6 +4,9 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <title>Caminando el territorio</title>
 </head>
 <style>
@@ -107,19 +110,30 @@
     padding-right: 100px;
     position: relative;
   }
+
   .swiper-slide .venado {
     font-size: 14px;
     max-width: 400px;
     float: left;
-    bottom: 40%;
-    margin-left:100px;
+    bottom: 30%;
+    margin-left: 100px;
     position: relative;
   }
+
   .swiper-slide .hombre2 {
     position: relative;
     bottom: 42%;
     z-index: -100;
     margin-left: 100px;
+  }
+
+  .swiper-slide .contacto {
+    color: #133127;
+    text-align: center;
+    max-width: 700px;
+    top: 15%;
+    position: relative;
+    margin: auto;
   }
 
   .swiper-slide .hombre {
@@ -196,20 +210,25 @@
   hr {
     background-color: #133127;
   }
+
+  a {
+    text-decoration: none;
+    color: #133127;
+  }
 </style>
 
 <body>
   <!-- Swiper -->
   <div class="swiper-container">
     <div class="parallax-bg"
-      style="background-image:url('http://www.caminandoelterritorio.org/img/background.jpg'); background-position: cover;"
-      data-swiper-parallax="-23%"></div>
+      style="background-image:url('http://www.caminandoelterritorio.org/img/background.jpg'); background-position: cover center;"
+      data-swiper-parallax="-23%">
+    </div>
     <div class="swiper-wrapper" style="text-align: center;">
       <div class="title" data-swiper-parallax="300" style="position: absolute; z-index: -100;"><img
           src="img/clouds-min.png" alt=""></div>
       <!-- <div class="title" data-swiper-parallax="-300" style="position: absolute; z-index: -100;"><img src="img/img-back.png" tener en cuenta el width en el ancho <width="600%"> alt=""></div> -->
-      <div class="title" data-swiper-parallax="-300" style="position: absolute; z-index: -100;"><img
-          src="img/img-back.png" alt=""></div>
+      <div class="title" data-swiper-parallax="-300" style="position: absolute; z-index: -100;"><img src="img/img-back.png" alt=""></div>
       <div class="swiper-slide">
         <div class="logo" data-swiper-parallax="-200">
           <img src="img/caminando_el_territorio.png" width="100%" style="top:300px" alt="">
@@ -259,7 +278,9 @@
                   <p><b>COMUNIDADES</b></p>
                 </div>
                 <div class="col-sm">
-                  <button type="button" class="btn btn-primary">Saber más</button>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#comunidades">
+                    Saber más
+                  </button>
                 </div>
               </div>
               <hr>
@@ -412,10 +433,55 @@
       <div class="swiper-slide">
         <div class="logo" data-swiper-parallax="-200">
           <img src="img/caminando_el_territorio.png" width="100%" style="top:300px" alt="">
-          <p class="panel-main">Con las comunidades paso a paso
-            construimos justicia y sustentabilidad
-            ambiental en los territorios
-          </p>
+        </div>
+        <div class="contacto">
+          <div class="row">
+            <div class="col-sm">
+              <p style="padding:5px;">Carrera 8 Nº 17-59 Soacha
+                <br>
+                (Centro cultural Xucasa)
+              </p>
+            </div>
+            <div class="col-sm">
+              <p><img src="img/telefono.png" style="width:80px; padding: 5px;" alt="">315 222 24 08</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm">
+              <p style="padding:5px;">
+                <a href="mailto:caminandoelterritorio@hotmail.com" target="_blank">
+                  <p></p><img src="img/email.png" style="width:40px; padding: 5px;" alt="">
+                  caminandoelterritorio@hotmail.com
+              </p>
+              </a>
+              </p>
+            </div>
+            <div class="col-sm">
+              <p style="padding:7px;">
+                <a href="mailto:c.a.caminandoelterritorio@gmail.com" target="_blank">
+                  <p></p> c.a.caminandoelterritorio@gmail.com
+              </p>
+              </a>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm">
+              <a href="https://es-la.facebook.com/CaminandoSuacha/" target="_blank">
+                <p><img src="img/instagram.png" style="width:40px; padding: 5px;" alt="">CaminandoSuacha</p>
+              </a>
+            </div>
+            <div class="col-sm">
+              <a href=https://www.instagram.com/caminandoelterritorio/" target="_blank">
+                <p><img src="img/instagram.png" style="width:40px; padding: 5px;" alt="">caminandoelterritorio</p>
+              </a>
+            </div>
+            <div class="col-sm">
+              <a href="https://twitter.com/CaminandoElTerr" target="_blank">
+                <p><img src="img/twitter.png" style="width:40px; padding: 5px;" alt="">@CaminandoElTerr</p>
+              </a>
+            </div>
+          </div>
         </div>
         <div class="text" data-swiper-parallax="-100">
         </div>
@@ -429,6 +495,27 @@
     <!-- Add Navigation -->
     <div class="swiper-button-prev swiper-button-white"></div>
     <div class="swiper-button-next swiper-button-white"></div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="comunidades" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Comunidades</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="https://unpkg.com/swiper/js/swiper.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
